@@ -10,9 +10,9 @@
 
 - [About the project](#about-the-project)
 - [Setup](#setup)
-  - [NASA API](#nasa-api)
-    - [About API](#about-apihttpsapinasagov)
-    - [Test cases:](#test-cases)
+- [NASA API Tests](#nasa-api-tests)
+  - [About API](#about-apihttpsapinasagov)
+  - [Test cases:](#test-cases)
 
 <!-- /code_chunk_output -->
 
@@ -37,9 +37,9 @@ The applications that will be tested:
 - NUnit 3.13.3
 
 ---
-#### NASA API
+### NASA API Tests
 
-##### [About API](https://api.nasa.gov/)
+#### [About API](https://api.nasa.gov/)
 This API returns the Astronomic Photo of the day in the following format: 
 ``` 
 {
@@ -57,22 +57,22 @@ Query parameters:
 
 |Parameter	|Type |	Default |	Description  |
 | ------------- | ------------- |------------- | ------------- |
-date|	YYYY-MM-DD	|today	|The date of the APOD image to retrieve |
+date|	YYYY-MM-DD	 |today	|The date of the APOD image to retrieve |
 start_date|	YYYY-MM-DD |	none |	The start of a date range, when requesting date for a range of dates. Cannot be used with date. |
 end_date |	YYYY-MM-DD	| today |	The end of the date range, when used with start_date. |
 count |	int |	none |	If this is specified then count randomly chosen images will be returned. Cannot be used with date or start_date and end_date.|
 thumbs |	bool	 |	False |	If this is specified then count randomly chosen images will be returned. Cannot be used with date or start_date and end_date.|
 
 
-##### Test cases:
+#### Test cases:
 
-| API  | Test | Expected Result |
-| ------------- | ------------- |------------- |
-| [NASA APIs](https://api.nasa.gov/)  | Search for APOD using a valid token  | Status code 200 |
-| [NASA APIs](https://api.nasa.gov/)  | Search for APOD using a valid token  | Valid body response
-| [NASA APIs](https://api.nasa.gov/)  | Search for APOD using a valid token and passing a date  | Status code 200
-| [NASA APIs](https://api.nasa.gov/)  | Search for APOD using a valid token and passing a date with wrong format  | Status code 400
-| [NASA APIs](https://api.nasa.gov/)  | Search for APOD using a valid token and passing a start date and end date  | Status code 200
-| [NASA APIs](https://api.nasa.gov/)  | Search for APOD using a valid token and passing a start date bigger than end date  | Status code 400
-| [NASA APIs](https://api.nasa.gov/)  | Search for APOD using a invalid token | Status code 401
+| Test | Expected Result |
+| ------------- |------------- |
+| Search for APOD using a valid token  | Status code 200 |
+| Search for APOD using a valid token  | Valid body response
+| Search for APOD using a valid token and passing a date  | Status code 200
+| Search for APOD using a valid token and passing a date with wrong format  | Status code 400
+| Search for APOD using a valid token and passing a start date and end date  | Status code 200
+| Search for APOD using a valid token and passing a start date bigger than end date  | Status code 400
+| Search for APOD using a invalid token | Status code 401
 
