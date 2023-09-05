@@ -1,8 +1,9 @@
 using System.Net;
 using FluentAssertions;
 using LearningNUnit.BackEnd.Requests;
+using NUnit.Allure.Attributes;
 using RestSharp;
-namespace BackEndTests;
+namespace LearningNUnit.BackEnd.Tests;
 public class NasaApiTests
 {
         RequestClass request = new RequestClass();
@@ -22,4 +23,5 @@ public class NasaApiTests
             restResponse.Content.Should().Contain("url");
 
         }
+        
 }
