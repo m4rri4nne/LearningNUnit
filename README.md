@@ -36,6 +36,12 @@ The applications that will be tested:
 - .NET 7.0.307
 - NUnit 3.13.3
 
+
+### Dependencies 
+- FluentAssertions 6.12.0
+- RestSharp 110.2.0
+- Should 1.1.20 
+
 ---
 ### NASA API Tests
 
@@ -76,3 +82,39 @@ thumbs |	bool	 |	False |	If this is specified then count randomly chosen images 
 | Search for APOD using a valid token and passing a start date bigger than end date  | Status code 400
 | Search for APOD using a invalid token | Status code 401
 
+#### Process to automate
+To automate, i've used the TDD process:
+
+![image-blog-test-driven-data.jpg](images%2Fimage-blog-test-driven-data.jpg)
+
+First, i've created a test falling without any refactor:
+```
+ 
+ static string token = "AZZG1IIlYSKdTvQpaHeuKYqM30t0bsEZdbi7NtVZ";
+ static string baseUrl = "https://api.nasa.gov";
+ 
+ public void SearchApodSucess()
+        {
+            RestClient client = new RestClient(baseUrl);
+            RestRequest restRequest= new RestRequest($"/planetary/apod?api_key={token}", Method.Get);
+            RestResponse restResponse= client.Execute(restRequest);
+            RestResponse restResponse = request.NasaApiRequest();
+            restResponse.Should().NotBeNull();
+            restResponse.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+
+        }
+```
+
+After that, I've made the test pass and started the refactor. To test the BackEnd, I'm using the following model:
+```
+.
+├── Solution
+│   └── BackEnd
+|       └── Entities/NasaApiEntity.cs
+|       └── Requests/RequestClass.cs
+|       └── Tests/NasaApiTests.cs  
+```
+
+- Entities: For body request and body response models. 
+- Requests: Class responsible to do the requests of the project. 
+- Tests: The automated tests. 
