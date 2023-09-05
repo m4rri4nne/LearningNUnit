@@ -3,19 +3,6 @@
     🚧  Under Construction   🚧
 </h4>
 
-## Summary
-<!-- @import "[TOC]" {cmd="toc" depthFrom=3 depthTo=6 orderedList=false} -->
-
-<!-- code_chunk_output -->
-
-- [About the project](#about-the-project)
-- [Setup](#setup)
-- [NASA API Tests](#nasa-api-tests)
-  - [About API](#about-apihttpsapinasagov)
-  - [Test cases:](#test-cases)
-
-<!-- /code_chunk_output -->
-
 ---
 
 ### About the project 
@@ -70,7 +57,7 @@ count |	int |	none |	If this is specified then count randomly chosen images will
 thumbs |	bool	 |	False |	If this is specified then count randomly chosen images will be returned. Cannot be used with date or start_date and end_date.|
 
 
-#### Test cases:
+#### Test cases
 
 | Test | Expected Result |
 | ------------- |------------- |
