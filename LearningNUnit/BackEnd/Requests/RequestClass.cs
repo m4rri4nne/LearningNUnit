@@ -22,7 +22,7 @@ public class RequestClass
         var baseResource = $"/planetary/apod?api_key={token}";
         if (queryParameters != null)
         {
-            return baseResource + queryParameters;
+            return $"{baseResource}&{queryParameters}";
         }
 
         return baseResource;

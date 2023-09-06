@@ -25,7 +25,20 @@
   <ItemGroup>
     <Compile Remove="BackEnd\Requests\Requests.cs" />
     <Compile Remove="BackEnd\Entities\NasaEntities.cs" />
+    <Compile Remove="BackEnd\Common\Commom.cs" />
+    <Compile Remove="BackEnd\Common\Common.cs" />
+    <Compile Remove="BackEnd\Common\**" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="BackEnd\Common\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="BackEnd\Common\**" />
+  </ItemGroup>
+
+
 
 
 
