@@ -4,11 +4,10 @@ namespace LearningNUnit.BackEnd.Requests;
 
 public class RequestClass
 {
-
-    static string token = "AZZG1IIlYSKdTvQpaHeuKYqM30t0bsEZdbi7NtVZ";
+    
     static string baseUrl = "https://api.nasa.gov";
 
-    public RestResponse NasaApiRequest(string? queryParameters=null)
+    public RestResponse NasaApiRequest(string? token="AZZG1IIlYSKdTvQpaHeuKYqM30t0bsEZdbi7NtVZ", string? queryParameters=null)
     {
         RestClient client = new RestClient(baseUrl);
         RestRequest restRequest = new RestRequest(NasaResource(token, queryParameters), Method.Get);
