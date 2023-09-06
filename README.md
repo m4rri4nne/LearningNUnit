@@ -105,3 +105,32 @@ After that, I've made the test pass and started the refactor. To test the BackEn
 - Entities: For body request and body response models. 
 - Requests: Class responsible to do the requests of the project. 
 - Tests: The automated tests. 
+
+--- 
+### Fake API Tests 
+
+#### [About API](https://fakerestapi.azurewebsites.net/index.html)
+This API returns a list of Books in the following format: 
+``` 
+[
+  {
+    "id": 1,
+    "title": "Book 1",
+    "description": "Lorem nonumy iusto takimata ut sit ut consetetur erat sanctus sed vel ut labore nulla et consetetur sed nonumy. Adipiscing hendrerit gubergren elitr at no\n",
+    "pageCount": 100,
+    "excerpt": "Nonumy duo no. Clita invidunt hendrerit lorem ea sed ipsum. Nonummy labore ut at lorem feugiat erat sit dolor sit et velit. Dolore sit lorem diam sit ipsum at stet elit kasd et et.\nJusto te accusam amet ea aliquyam iriure at et ea nihil esse nibh volutpat eros et. Eu consequat exerci voluptua dolor nonumy erat invidunt consetetur vel takimata veniam at zzril kasd dolor amet diam. Lorem kasd ipsum. Quod justo minim takimata dolor dolore sanctus clita diam dolore duis voluptua nonumy nibh cum velit tempor no. Velit suscipit diam ea sanctus consetetur dignissim magna dolor.\n",
+    "publishDate": "2023-09-05T15:30:40.6574078+00:00"
+  },
+]
+```
+
+#### Test cases
+
+| Test | Expected Result |
+| ------------- |------------- |
+| Search for Books  | Status code 200 |
+| Search for Books  | Valid body response
+| Search for a  Book  | Status code 200
+| Create a Book  | Status code 200
+| Update a Book  | Status code 200
+| Delete a Book  | Status code 200

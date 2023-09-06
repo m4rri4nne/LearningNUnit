@@ -1,7 +1,6 @@
 using System.Net;
 using FluentAssertions;
 using LearningNUnit.BackEnd.Requests;
-using NUnit.Allure.Attributes;
 using RestSharp;
 namespace LearningNUnit.BackEnd.Tests;
 public class NasaApiTests

@@ -28,6 +28,7 @@
     <Compile Remove="BackEnd\Common\Commom.cs" />
     <Compile Remove="BackEnd\Common\Common.cs" />
     <Compile Remove="BackEnd\Common\**" />
+    <Compile Remove="BackEnd\Entities\NasaApiEntity.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +38,7 @@
   <ItemGroup>
     <None Remove="BackEnd\Common\**" />
   </ItemGroup>
+
 
 
 
