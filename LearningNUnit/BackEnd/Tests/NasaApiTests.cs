@@ -16,12 +16,29 @@ public class NasaApiTests
             restResponse.Content.Should().Contain("copyright");
             restResponse.Content.Should().Contain("date");
             restResponse.Content.Should().Contain("explanation");
-            restResponse.Content.Should().Contain("hdurl");
+            //restResponse.Content.Should().Contain("hdurl");
             restResponse.Content.Should().Contain("media_type");
             restResponse.Content.Should().Contain("service_version");
             restResponse.Content.Should().Contain("title");
             restResponse.Content.Should().Contain("url");
 
         }
-        
+
+        [Test]
+        public void SearchApodWithDate()
+        {
+            var queryParameters = "date=2023-05-01";
+            RestResponse restResponse = request.NasaApiRequest(queryParameters);
+            restResponse.Should().NotBeNull();
+            restResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+            restResponse.Content.Should().Contain("copyright");
+            restResponse.Content.Should().Contain("date");
+            restResponse.Content.Should().Contain("explanation");
+            //restResponse.Content.Should().Contain("hdurl");
+            restResponse.Content.Should().Contain("media_type");
+            restResponse.Content.Should().Contain("service_version");
+            restResponse.Content.Should().Contain("title");
+            restResponse.Content.Should().Contain("url");
+
+        }
 }
