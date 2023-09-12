@@ -1,8 +1,4 @@
 # Automated Tests using NUnit and C# - API Tests
-<h4 align="center"> 
-    🚧  Under Construction   🚧
-</h4>
-
 ---
 
 ### About the project 
@@ -36,6 +32,7 @@ The applications that will be tested:
 
 </div>
 
+--- 
 
 ### NASA API Tests
 
