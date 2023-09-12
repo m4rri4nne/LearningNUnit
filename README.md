@@ -78,7 +78,9 @@ thumbs |	bool	 |	False |	If this is specified then count randomly chosen images 
 
 #### Process to automate
 To automate, i've used the TDD process:
+
 <div align="center"> 
+
    ![image-blog-test-driven-data.jpg](images%2Fimage-blog-test-driven-data.jpg)
 </div>
 
@@ -147,7 +149,7 @@ This API returns a list of Books in the following format:
 
 For the different methods(POST,PUT,DELETE), the process was basically the same,but, when is needed to pass a body request, before execute the request, just call the function AddBody. 
 
-````
+```
 restRequest.AddBody(body, ContentType.Json);
 
 ```
