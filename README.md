@@ -13,10 +13,8 @@ Project focused on fix the knowlaged on automated tests using NUnit Framework an
 
 The applications that will be tested: 
 
-| BackEnd  | 
-| ------------- | 
-| [NASA APIs](https://api.nasa.gov/)  |
-| [Fake API](https://fakerestapi.azurewebsites.net/index.html)  |
+- [NASA APIs](https://api.nasa.gov/) 
+- [Fake API](https://fakerestapi.azurewebsites.net/index.html)
 
 ---
 ### Setup
@@ -35,7 +33,7 @@ The applications that will be tested:
 <div align="center"> 
 
    ![mindmap.jpg](images%2Fmindmap.jpg)
-   
+
 </div>
 
 
@@ -80,8 +78,9 @@ thumbs |	bool	 |	False |	If this is specified then count randomly chosen images 
 
 #### Process to automate
 To automate, i've used the TDD process:
-
-![image-blog-test-driven-data.jpg](images%2Fimage-blog-test-driven-data.jpg)
+<div align="center"> 
+   ![image-blog-test-driven-data.jpg](images%2Fimage-blog-test-driven-data.jpg)
+</div>
 
 First, i've created a test falling without any refactor:
 ```
