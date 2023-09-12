@@ -1,4 +1,4 @@
-# Automated Tests using NUnit and C#
+# Automated Tests using NUnit and C# - API Tests
 <h4 align="center"> 
     🚧  Under Construction   🚧
 </h4>
@@ -13,9 +13,9 @@ Project focused on fix the knowlaged on automated tests using NUnit Framework an
 
 The applications that will be tested: 
 
-| BackEnd  | FrontEnd |
-| ------------- | ------------- |
-| [NASA APIs](https://api.nasa.gov/)  | [Swag Labs](https://www.saucedemo.com/)  |
+| BackEnd  | 
+| ------------- | 
+| [NASA APIs](https://api.nasa.gov/)  |
 | [Fake API](https://fakerestapi.azurewebsites.net/index.html)  |
 
 ---
@@ -30,6 +30,15 @@ The applications that will be tested:
 - Should 1.1.20 
 
 ---
+### Mind Map
+
+<div align="center"> 
+
+   ![mindmap.jpg](images%2Fmindmap.jpg)
+   
+</div>
+
+
 ### NASA API Tests
 
 #### [About API](https://api.nasa.gov/)
@@ -134,3 +143,37 @@ This API returns a list of Books in the following format:
 | Create a Book  | Status code 200
 | Update a Book  | Status code 200
 | Delete a Book  | Status code 200
+
+#### Process to automate
+
+For the different methods(POST,PUT,DELETE), the process was basically the same,but, when is needed to pass a body request, before execute the request, just call the function AddBody. 
+
+````
+restRequest.AddBody(body, ContentType.Json);
+
+```
+
+To build the body request, i've created a method to use the FakeApiEntites:
+
+```
+    public static FakeApiEntities BuildBodyRequest(int? id=null)
+    {
+        return new FakeApiEntities
+        {
+            Id = id ?? 100,
+            Title = "Test Book",
+            Description = "Mussum Ipsum, cacilds vidis litro abertis.  Quem num gosta di mim que vai caçá sua turmis!",
+            Excerpt = "uem num gosta di mim que vai caçá sua turmis!",
+            PageCount = 100,
+            PublishDate = "2023-09-03T13:50:32.6884665+00:00"
+        };
+    }
+
+```
+
+To validate the response body during the tests, i've Deserialize the content of the response body using the JsonSerializer.Deserialize:
+
+```
+    var bodyContent = JsonSerializer.Deserialize<FakeApiEntities>(response.Content!);
+
+```
