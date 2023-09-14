@@ -2,8 +2,8 @@
 ---
 
 ### About the project 
-Project focused on fix the knowlaged on automated tests using NUnit Framework and C#. During this project, will be registered all the process to automated a test, like: 
-- Undestading the application 
+Project focused on fix the knowledge on automated tests using NUnit Framework and C#. During this project, will be registered all the process to automated a test, like: 
+- Understading the application 
 - Writing Tests Cases 
 - Automation of the tests 
 
