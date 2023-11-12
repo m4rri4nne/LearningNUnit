@@ -12,6 +12,8 @@ The applications that will be tested:
 - [NASA APIs](https://api.nasa.gov/) 
 - [Fake API](https://fakerestapi.azurewebsites.net/index.html)
 
+You can see the step by step for this project [here](https://dev.to/m4rri4nne/nunit-and-c-tutorial-to-automate-your-api-tests-from-scratch-24nf)
+
 ---
 ### Setup
 - .NET 7.0.307
